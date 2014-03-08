@@ -1,9 +1,14 @@
-package com.example.testerfunction;
+package com.example.fragments;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.adapters.OrarAdapter;
 import com.example.services.GrupaService;
+import com.example.testerfunction.R;
+import com.example.testerfunction.R.dimen;
+import com.example.testerfunction.R.id;
+import com.example.testerfunction.R.layout;
 
 import android.app.Fragment;
 import android.content.Intent;

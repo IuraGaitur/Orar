@@ -1,9 +1,13 @@
-package com.example.testerfunction;
+package com.example.adapters;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.entities.Pereche;
 import com.example.services.GrupaService;
+import com.example.testerfunction.R;
+import com.example.testerfunction.R.id;
+import com.example.testerfunction.R.layout;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -73,16 +77,16 @@ public class OrarAdapter  extends BaseAdapter {
 			
 			
 			
-			lesson.setText(((Pereche)getItem(position)).tipPereche+((Pereche)getItem(position)).name);
-			professor.setText(((Pereche)getItem(position)).profesorul.name);
-			room.setText(String.format("%s", ((Pereche)getItem(position)).room));
+			lesson.setText(((Pereche)getItem(position)).getTipPereche()+((Pereche)getItem(position)).getName());
+			professor.setText(((Pereche)getItem(position)).getProfesorul().getName());
+			room.setText(String.format("%s", ((Pereche)getItem(position)).getRoom()));
 			
 			
-			if(((Pereche)getItem(position)).tipPereche.equals("course"))
+			if(((Pereche)getItem(position)).getTipPereche().equals("course"))
 				layout.setBackgroundColor(Color.RED);
-			else if(((Pereche)getItem(position)).tipPereche.equals("practice"))
+			else if(((Pereche)getItem(position)).getTipPereche().equals("practice"))
 				layout.setBackgroundColor(Color.BLUE);
-			else if(((Pereche)getItem(position)).tipPereche.equals("lab"))
+			else if(((Pereche)getItem(position)).getTipPereche().equals("lab"))
 				layout.setBackgroundColor(Color.YELLOW);
 			}
 			

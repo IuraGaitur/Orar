@@ -1,4 +1,5 @@
-package com.example.testerfunction;
+package com.example.entities;
+
 
 public class Pereche {
 

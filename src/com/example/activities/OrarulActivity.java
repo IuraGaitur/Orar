@@ -1,4 +1,8 @@
-package com.example.testerfunction;
+package com.example.activities;
+
+import com.example.testerfunction.R;
+import com.example.testerfunction.R.id;
+import com.example.testerfunction.R.layout;
 
 import android.app.Activity;
 import android.os.Bundle;

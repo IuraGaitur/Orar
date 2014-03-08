@@ -1,4 +1,7 @@
-package com.example.testerfunction;
+package com.example.fragments;
+
+import com.example.testerfunction.R;
+import com.example.testerfunction.R.layout;
 
 import android.app.ListFragment;
 import android.os.Bundle;
@@ -7,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
-public class OrarList extends ListFragment{
+public class OrarListFragment extends ListFragment{
 	
 	String data[] = new String[] { "one", "two", "three", "four" };
 	

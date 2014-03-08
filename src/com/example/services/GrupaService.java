@@ -3,9 +3,9 @@ package com.example.services;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.testerfunction.Grupa;
-import com.example.testerfunction.Pereche;
-import com.example.testerfunction.Profesor;
+import com.example.entities.Grupa;
+import com.example.entities.Pereche;
+import com.example.entities.Profesor;
 
 public class GrupaService {
 

@@ -1,9 +1,20 @@
-package com.example.testerfunction;
+package com.example.activities;
 
 import java.util.ArrayList;
 
+import com.example.fragments.CalendarFragment;
+import com.example.fragments.CurrentLessonFragment;
+import com.example.fragments.HomeFragment;
+import com.example.fragments.OrarFragment;
 import com.example.navigator.NavDraweListAdapter;
 import com.example.navigator.NavDrawerItem;
+import com.example.testerfunction.R;
+import com.example.testerfunction.R.array;
+import com.example.testerfunction.R.drawable;
+import com.example.testerfunction.R.id;
+import com.example.testerfunction.R.layout;
+import com.example.testerfunction.R.menu;
+import com.example.testerfunction.R.string;
 
 import android.R.bool;
 import android.os.Bundle;

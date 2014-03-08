@@ -1,9 +1,14 @@
-package com.example.testerfunction;
+package com.example.fragments;
 
 import java.util.ArrayList;
 
+import com.example.entities.Pereche;
+import com.example.entities.Profesor;
 import com.example.services.GrupaService;
 import com.example.services.OrarulService;
+import com.example.testerfunction.R;
+import com.example.testerfunction.R.id;
+import com.example.testerfunction.R.layout;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -38,8 +43,27 @@ public class SingleOrarFragmentActivity extends Activity{
 		RelativeLayout layout = (RelativeLayout)findViewById(R.id.item_full_screen);
 		layout.setOnTouchListener((OnTouchListener) this);
 		
+		 // Получаем объект ViewFlipper
+	    ViewFlipper flipper = (ViewFlipper) findViewById(R.id.flipper);
+
+	    // Создаем View и добавляем их в уже готовый flipper
+	    LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+	    int layouts[] = new int[]{ R.layout.lesson_item};
+	    for (int layoute : layouts)
+	        flipper.addView(inflater.inflate(layoute, null));
 		
-	  
+		
+		
+		GrupaService service = new GrupaService();
+		//ArrayList list = service.GetListPerechi("FAF-121");
+		ArrayList list = new ArrayList();
+		for(int i=0;i<47;i++)
+		{
+			Pereche pereche = new Pereche("LFPC",
+				new Profesor("Vasile Ungaru", "Profesor de la UTM", 64,
+						"PHD.Lector"), "course",512);
+			list.add(pereche);
+		}
 	}
 	
 	public boolean onTouch(View view, MotionEvent event)

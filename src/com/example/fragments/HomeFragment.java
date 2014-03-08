@@ -1,4 +1,4 @@
-package com.example.testerfunction;
+package com.example.fragments;
 
 import android.app.Fragment;
 
