@@ -1,6 +1,6 @@
 package com.example.entities;
 
-public class Profesor {
+public class Teacher {
 
 	int id;
 	String name;
@@ -37,7 +37,7 @@ public class Profesor {
 	public void setRangul(String rangul) {
 		this.rangul = rangul;
 	}
-	public Profesor(int id, String name, String description, int age,
+	public Teacher(int id, String name, String description, int age,
 			String rangul) {
 		super();
 		this.id = id;
@@ -46,14 +46,14 @@ public class Profesor {
 		this.age = age;
 		this.rangul = rangul;
 	}
-	public Profesor(String name, String description, int age, String rangul) {
+	public Teacher(String name, String description, int age, String rangul) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.age = age;
 		this.rangul = rangul;
 	}
-	public Profesor() {
+	public Teacher() {
 		super();
 	}
 	

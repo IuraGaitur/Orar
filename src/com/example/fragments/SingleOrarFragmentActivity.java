@@ -2,8 +2,8 @@ package com.example.fragments;
 
 import java.util.ArrayList;
 
-import com.example.entities.Pereche;
-import com.example.entities.Profesor;
+import com.example.entities.Lesson;
+import com.example.entities.Teacher;
 import com.example.services.GrupaService;
 import com.example.services.OrarulService;
 import com.example.testerfunction.R;
@@ -59,10 +59,10 @@ public class SingleOrarFragmentActivity extends Activity{
 		ArrayList list = new ArrayList();
 		for(int i=0;i<47;i++)
 		{
-			Pereche pereche = new Pereche("LFPC",
-				new Profesor("Vasile Ungaru", "Profesor de la UTM", 64,
+			/*Lesson pereche = new Lesson("LFPC",
+				new Teacher("Vasile Ungaru", "Profesor de la UTM", 64,
 						"PHD.Lector"), "course",512);
-			list.add(pereche);
+			list.add(pereche);*/
 		}
 	}
 	

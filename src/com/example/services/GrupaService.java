@@ -3,9 +3,9 @@ package com.example.services;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.entities.Grupa;
-import com.example.entities.Pereche;
-import com.example.entities.Profesor;
+import com.example.entities.Group;
+import com.example.entities.Lesson;
+import com.example.entities.Teacher;
 
 public class GrupaService {
 
@@ -42,10 +42,10 @@ public class GrupaService {
 				}
 				else
 				{
-					Pereche pereche = new Pereche("LFPC",
-							new Profesor("Vasile Ungaru", "Profesor de la UTM", 64,
+					/*Lesson pereche = new Lesson("LFPC",
+							new Teacher("Vasile Ungaru", "Profesor de la UTM", 64,
 									"PHD.Lector"), "course",512);
-					list.add(pereche);
+					list.add(pereche);*/
 				}
 				
 				

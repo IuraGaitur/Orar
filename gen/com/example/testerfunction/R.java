@@ -15,6 +15,7 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
+        public static final int background_main=0x7f040009;
         public static final int counter_text_bg=0x7f040007;
         public static final int counter_text_color=0x7f040008;
         public static final int course=0x7f040000;
@@ -64,28 +65,31 @@ public final class R {
         public static final int utm_univer=0x7f02000b;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0018;
+        public static final int action_settings=0x7f0a001b;
         public static final int btnClose=0x7f0a000d;
-        public static final int content_frame=0x7f0a0002;
         public static final int counter=0x7f0a0010;
-        public static final int day_iem_layout=0x7f0a0011;
-        public static final int day_item=0x7f0a0012;
+        public static final int day_iem_layout=0x7f0a0014;
+        public static final int day_item=0x7f0a0015;
         public static final int details=0x7f0a0007;
         public static final int drawer_icon=0x7f0a000e;
         public static final int drawer_layout=0x7f0a0001;
-        public static final int flipper=0x7f0a0014;
+        public static final int flipper=0x7f0a0017;
         public static final int fragmentList=0x7f0a0000;
-        public static final int hour_item_layout=0x7f0a0015;
-        public static final int item_full_screen=0x7f0a0013;
-        public static final int item_hour=0x7f0a0016;
+        public static final int hour_item_layout=0x7f0a0018;
+        public static final int imageView1=0x7f0a0012;
+        public static final int item_full_screen=0x7f0a0016;
+        public static final int item_hour=0x7f0a0019;
         public static final int item_text=0x7f0a0009;
         public static final int left_drawer=0x7f0a0003;
-        public static final int lesson_item_layout=0x7f0a0017;
+        public static final int lesson_item_layout=0x7f0a001a;
         public static final int orar_layout=0x7f0a0004;
         public static final int orarul=0x7f0a0005;
+        public static final int pager=0x7f0a0002;
         public static final int professor=0x7f0a000b;
+        public static final int progressBar1=0x7f0a0011;
         public static final int room=0x7f0a000c;
         public static final int single_lesson_item_layout=0x7f0a0008;
+        public static final int textView1=0x7f0a0013;
         public static final int title=0x7f0a000f;
         public static final int titles=0x7f0a0006;
         public static final int type_name=0x7f0a000a;
@@ -97,11 +101,12 @@ public final class R {
         public static final int activity_orarul=0x7f030003;
         public static final int activity_single_view=0x7f030004;
         public static final int drawer_list_item=0x7f030005;
-        public static final int item_day=0x7f030006;
-        public static final int item_fullscreen=0x7f030007;
-        public static final int item_hour=0x7f030008;
-        public static final int lesson_item=0x7f030009;
-        public static final int menu_draw_item=0x7f03000a;
+        public static final int home_activity=0x7f030006;
+        public static final int item_day=0x7f030007;
+        public static final int item_fullscreen=0x7f030008;
+        public static final int item_hour=0x7f030009;
+        public static final int lesson_item=0x7f03000a;
+        public static final int menu_draw_item=0x7f03000b;
     }
     public static final class menu {
         public static final int main=0x7f090000;

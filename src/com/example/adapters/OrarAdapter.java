@@ -3,7 +3,7 @@ package com.example.adapters;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.entities.Pereche;
+import com.example.entities.Lesson;
 import com.example.services.GrupaService;
 import com.example.testerfunction.R;
 import com.example.testerfunction.R.id;
@@ -50,7 +50,7 @@ public class OrarAdapter  extends BaseAdapter {
 			LayoutInflater inflater = (LayoutInflater) mContext
 	                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			View cellView = null;
-			if(position < 7 && position > 0)
+			/*if(position < 7 && position > 0)
 			{
 				cellView = inflater.inflate(R.layout.item_day, parent,false);
 				TextView day = (TextView)cellView.findViewById(R.id.day_item);
@@ -77,16 +77,16 @@ public class OrarAdapter  extends BaseAdapter {
 			
 			
 			
-			lesson.setText(((Pereche)getItem(position)).getTipPereche()+((Pereche)getItem(position)).getName());
-			professor.setText(((Pereche)getItem(position)).getProfesorul().getName());
-			room.setText(String.format("%s", ((Pereche)getItem(position)).getRoom()));
+			lesson.setText(((Lesson)getItem(position)).getTipPereche()+((Lesson)getItem(position)).getName());
+			professor.setText(((Lesson)getItem(position)).getProfesorul().getName());
+			room.setText(String.format("%s", ((Lesson)getItem(position)).getRoom()));
 			
 			
-			if(((Pereche)getItem(position)).getTipPereche().equals("course"))
+			if(((Lesson)getItem(position)).getTipPereche().equals("course"))
 				layout.setBackgroundColor(Color.RED);
-			else if(((Pereche)getItem(position)).getTipPereche().equals("practice"))
+			else if(((Lesson)getItem(position)).getTipPereche().equals("practice"))
 				layout.setBackgroundColor(Color.BLUE);
-			else if(((Pereche)getItem(position)).getTipPereche().equals("lab"))
+			else if(((Lesson)getItem(position)).getTipPereche().equals("lab"))
 				layout.setBackgroundColor(Color.YELLOW);
 			}
 			
@@ -97,7 +97,7 @@ public class OrarAdapter  extends BaseAdapter {
 				day.setText("FAF-121");
 				RelativeLayout layout = (RelativeLayout)cellView.findViewById(R.id.day_iem_layout);
 				layout.setBackgroundColor(Color.GRAY);
-			}
+			}*/
 			return cellView;
 		}
 		

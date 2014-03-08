@@ -2,6 +2,7 @@ package com.example.activities;
 
 import java.util.ArrayList;
 
+import com.example.adapters.TabsAdapter;
 import com.example.fragments.CalendarFragment;
 import com.example.fragments.CurrentLessonFragment;
 import com.example.fragments.HomeFragment;
@@ -17,7 +18,10 @@ import com.example.testerfunction.R.menu;
 import com.example.testerfunction.R.string;
 
 import android.R.bool;
+import android.net.wifi.p2p.WifiP2pManager.ActionListener;
 import android.os.Bundle;
+import android.app.ActionBar.Tab;
+import android.app.ActionBar.TabListener;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -25,8 +29,10 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
@@ -40,8 +46,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.app.ActionBar;
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends FragmentActivity implements ActionBar.TabListener{
 
 	Button showOrar;
 	private String[] mOptionsTitles;
@@ -60,12 +67,96 @@ public class MainActivity extends Activity implements OnClickListener {
 	private ArrayList<NavDrawerItem> navDrawerItems;
 	private NavDraweListAdapter adapter;
 	private ActionBarDrawerToggle mDrawerToggle;
+	
+	
+	//for tabs
+	private ViewPager viewPager;
+	private TabsAdapter tAdapter;
+	private ActionBar actionBar;
+	private String[] tabs = {"Home","Lessons","Today"};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		InsertTabMenu(savedInstanceState);
+		//InsertDrawerList(savedInstanceState);
+	}
+	
+	////////////////////////////////////////////////////////////
+	////TabMenu/////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////
+	public void InsertTabMenu(Bundle savedInstance)
+	{
+		viewPager = (ViewPager)findViewById(R.id.pager);
+		actionBar = getActionBar();
+		tAdapter = new TabsAdapter(getSupportFragmentManager());
+		
+		viewPager.setAdapter(tAdapter);
+		actionBar.setHomeButtonEnabled(false);
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		
+		for(String tab:tabs)
+		{
+			actionBar.addTab(actionBar.newTab().setText(tab).setTabListener(this));
+		}
+		
+		viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+			
+			@Override
+			public void onPageSelected(int arg0) {
+				actionBar.setSelectedNavigationItem(arg0);
+				
+			}
+			
+			@Override
+			public void onPageScrolled(int arg0, float arg1, int arg2) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onPageScrollStateChanged(int arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		
+		
+		
+	}
+	@Override
+	public void onTabReselected(Tab tab, FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
+	}
 
+	@Override
+	public void onTabSelected(Tab tab, FragmentTransaction ft) {
+		viewPager.setCurrentItem(tab.getPosition());
+		
+	}
+
+	@Override
+	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	///////////////////////////////////////////////////////////
+	//DrawerList Code/////////////////////////////////////////
+	/////////////////////////////////////////////////////////
+	/*
+	public void InsertDrawerList(Bundle savedInstanceState)
+	{
 		mTitle = mDrawerTitle = getTitle();
 		navMenuTitles = getResources().getStringArray(R.array.daysOrar);
 		navMenuIcons = getResources().obtainTypedArray(R.array.photo_daysOrar);
@@ -161,6 +252,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	/***
 	 * Called when invalidateOptionsMenu() is triggered
 	 */
+	/*
 	@Override
 	public boolean onPrepareOptionsMenu(Menu menu) {
 		// if nav drawer is opened, hide the action items
@@ -179,7 +271,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	 * When using the ActionBarDrawerToggle, you must call it during
 	 * onPostCreate() and onConfigurationChanged()...
 	 */
-
+/*
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
@@ -196,7 +288,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 
 	/** Swaps fragments in the main content view */
-	private void selectItem(int position) {
+	/*private void selectItem(int position) {
 		// Create a new fragment and specify the planet to show based on
 		// position
 		Fragment fragment = new OrarFragment();
@@ -258,4 +350,10 @@ public class MainActivity extends Activity implements OnClickListener {
 		
 	}
 
+	*/
+	
+	
+	
+	
+	
 }
