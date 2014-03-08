@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TesterFunction</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	
+	
+	<string-array name="daysOrar">
+	    <item >Alege grupa</item>
+	    <item >Orarul pe azi</item>
+	    <item >Orarul pe saptamina</item>
+	    <item >Perechea curenta</item>
+	</string-array>
+	
+	<array name="photo_daysOrar">
+	    <item>@drawable/home</item>
+	    <item>@drawable/calendar</item>
+	    <item>@drawable/lessons</item>
+	    <item>@drawable/current</item>
+	</array>
+	
+	<string name="desc_list_item_icon">Item Icon</string>
+	
+</resources>

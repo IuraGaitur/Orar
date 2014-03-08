@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+	
+	
+	<dimen name="height_item_list">60dp</dimen>
+    <dimen name="height_item_hour">60dp</dimen>
+    
+	<dimen name="lesson_item_type_name">8dp</dimen>
+	<dimen name="lesson_item_room">8dp</dimen>
+	<dimen name="lesson_item_text_big">8dp</dimen>
+	<dimen name="lesson_item_text_norm">7dp</dimen>
+	<dimen name="day_item">10dp</dimen>
+	<dimen name="lesson_item_vert_space">2dp</dimen>
+	<dimen name="lesson_item_horiz_space">2dp</dimen>
+	
+	<dimen name="hour_item_text">10dp</dimen>
+	
+	
+	<dimen name="drawer_layout">40dp</dimen>
+	<dimen name="drawer_icon">30dp</dimen>
+	<dimen name="drawer_margin_icon">10dp</dimen>
+	<dimen name="drawer_margin_text">40dp</dimen>
+</resources>

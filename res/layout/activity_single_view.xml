@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/single_lesson_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/lesson_item_type_name"
+            android:paddingTop="@dimen/lesson_item_type_name"
+            android:text="c. Sisteme de operare"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/lesson_item_text_big" />
+
+        <TextView
+            android:id="@+id/professor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I.Cojuhari"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/lesson_item_text_big" />
+
+        <TextView
+            android:id="@+id/room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/lesson_item_room"
+            android:text="512"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="@dimen/lesson_item_text_norm" />
+    </RelativeLayout>
+
+     <Button
+        android:id="@+id/btnClose"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:background="@drawable/button_background"
+        android:textColor="#ffffff"
+        android:text="Close" />
+    
+    
+    
+</RelativeLayout>

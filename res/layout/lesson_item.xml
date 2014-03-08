@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lesson_item_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_item_list">
+	
+   
+    <TextView
+        android:id="@+id/type_name"
+        android:layout_width="wrap_content" 
+        android:textSize="@dimen/lesson_item_text_big"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/lesson_item_type_name"
+        android:paddingBottom="@dimen/lesson_item_type_name"
+        android:text="c. Sisteme de operare"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/professor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/lesson_item_text_big"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/type_name"
+        android:text="I.Cojuhari"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/lesson_item_text_norm"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/professor"
+        android:paddingBottom="@dimen/lesson_item_room"
+        android:text="512"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
